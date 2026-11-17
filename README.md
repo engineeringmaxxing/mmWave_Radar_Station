@@ -1,63 +1,61 @@
-# HearthSense
+# HearthSense — mmWave Radar Station
 
-**Experimental privacy-preserving human activity sensing with 60 GHz mmWave radar and distributed Wi-Fi channel state information (CSI).**
+**A camera-free experimental human-movement research platform based on 60 GHz millimetre-wave (mmWave) radar.**
 
-> **Status (November 2026):** hardware planning and research setup. Detection performance is **not yet validated**. HearthSense is **not a medical device or emergency alert system**.
+> **Status (November 2026):** system architecture and hardware planning. Hardware integration and experimental results are pending. This project is **not** a validated fall-detection or emergency response device.
 
-## Research question
+## Project scope
 
-Can combining radar tracking with distributed Wi-Fi CSI improve the robustness of detecting fall-like events compared with either sensing modality alone?
+This repository documents the **standalone radar project** being developed for Hack Club Fabricate: an adjustable 60 GHz radar sensing station capable of collecting, visualising and analysing human-motion measurements in a controlled indoor environment.
 
-## Proposed hardware (V1)
+The objective is to investigate whether radar point-cloud and tracked-object data can distinguish everyday movement from *fall-like events*, particularly near the floor and under different mounting conditions.
 
-| Hardware | Planned purpose |
+## Proposed hardware
+
+| Component | Purpose |
 | --- | --- |
-| **TI IWR6843ISK-ODS** | 60 GHz radar point-cloud and movement tracking |
-| **Raspberry Pi 5 (8 GB)** | Local data acquisition, logging, fusion and dashboard |
-| **4 × ESP32-C5 boards** | Two transmitters and two receivers; up to four scheduled directed CSI links |
-| **4 × Taoglas FXP830.07.0100C antennas** | Matched external Wi-Fi antennas |
-| **3D-printed mounts and enclosures** | Repeatable placement and adjustable radar mounting |
+| **Texas Instruments IWR6843ISK-ODS** | 60 GHz FMCW radar evaluation module for 3D point-cloud and people-tracking experiments |
+| **Raspberry Pi 5 (8 GB)** | Local data acquisition, event logging, radar processing and visualisation |
+| **Official Raspberry Pi 5 power supply** | Reliable power for the processing computer |
+| **Raspberry Pi 5 active cooler** | Thermal management during extended runs |
+| **microSD boot storage** | Operating system and development environment |
+| **Custom 3D-printed housing and adjustable bracket** | Safe, repeatable sensor placement and mounting-angle experiments |
 
-**Important:** Confirm an external-antenna ESP32-C5 board such as **DFR1287 (ESP32-C5-U)** before buying; the similarly named **DFR1222** includes an onboard PCB antenna and does not directly accommodate the proposed U.FL antennas.
+All parts are **planned**, not represented here as purchased, assembled or tested. Confirm actual radar connection and power requirements for the selected board revision.
 
-These are planned components, not a claim that the prototype is assembled or working.
+## Engineering objectives
 
-## Research plan
+1. **Radar acquisition:** bring up the TI radar development board, inspect supported tracking demonstrations and capture timestamped point-cloud / track output.
+2. **Mechanical design:** model and fabricate a secure radar housing and adjustable mounting bracket, with cable strain relief and unobstructed radar aperture.
+3. **Mounting study:** compare overhead and high-wall arrangements, recording sensor height, tilt, tracked region and visibility near the floor.
+4. **Activity experiments:** collect data for walking, sitting, bending, kneeling and lying down, as well as safely simulated fall-like transitions.
+5. **Prototype classification:** explore interpretable radar-derived features and basic classification; distinguish fall-like events from confounding daily activities.
+6. **Evaluation:** report event recall, false-alarm frequency, latency, tracking dropouts and sensitivity to furniture and placement changes.
 
-1. **Radar baseline:** obtain TI point-cloud/tracking output; compare ceiling and wall mounting and furniture occlusion.
-2. **CSI baseline:** establish one stable transmit–receive link, then expand to four nodes and validate packet scheduling.
-3. **Multimodal acquisition:** ingest both sensor streams on the Raspberry Pi, monitor dropped samples, and establish time alignment.
-4. **Controlled tests:** collect ordinary daily activities, rapid sitting, kneeling, lying down and safely simulated fall-like transitions.
-5. **Evaluation:** compare radar-only, CSI-only and fusion models; report recall, false alarms per hour/day, detection latency and sensitivity to room changes.
-6. **Hardware refinement:** develop mounting hardware and enclosures; consider custom PCBs only after acquisition is verified.
+Results will be reported only after experimental validation. Avoid leakage between overlapping windows from the same recording session when evaluating models.
 
-Use held-out sessions and, where feasible, participants and room configurations to limit dataset leakage.
-
-## Planned repository structure
+## Proposed repository structure
 
 ```text
-hardware/       CAD, mounting designs, wiring, BOM
-firmware/       ESP32 CSI capture and device configuration
-radar/          TI configuration, parsers, radar experiments
-wifi-csi/       CSI capture and signal processing
-fusion/         Time alignment, classification and ablation studies
-experiments/    Protocols, datasets metadata and metrics
-docs/           Setup guides and research journal
+hardware/       CAD models, printed mounts, wiring and bill of materials
+radar/          TI configurations, acquisition scripts and parsers
+processing/     Radar-only activity features and prototype classifiers
+experiments/    Test protocols, analyses and evaluation results
+docs/           Setup instructions and engineering journal
 ```
 
-These folders will be added as actual project files become available.
+Folders will be created as substantive files become available.
 
-## References
+## Software and references
 
 - [TI IWR6843ISK-ODS](https://www.ti.com/tool/IWR6843ISK-ODS)
 - [TI Radar Toolbox](https://www.ti.com/tool/RADAR-TOOLBOX)
-- [Espressif ESP-CSI](https://github.com/espressif/esp-csi)
 - [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/)
 
-## Safety, privacy and transparency
+## Safety and privacy
 
-The system is an experimental platform for investigating **fall-like events** and must not be used as the sole basis for emergency response. Research participants should consent to data collection and to safe, controlled test procedures. Avoid publishing identifiable human data. A privacy-preserving end product is the design goal, not an already verified property.
+This is experimental human-activity research, **not** clinical fall detection. Do not rely on its output for emergency assistance. Obtain participant consent, use safe controlled test procedures and avoid publishing identifiable recordings or personal data.
 
 ## License
 
-This repository currently includes an [MIT License](LICENSE) for software and associated documentation. Hardware design files and datasets may have separate licensing and privacy requirements.
+This repository includes an [MIT License](LICENSE). Review licensing separately for any future hardware design files and research datasets.
