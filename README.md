@@ -10,18 +10,23 @@ This repository documents the **standalone radar project** being developed for H
 
 The objective is to investigate whether radar point-cloud and tracked-object data can distinguish everyday movement from *fall-like events*, particularly near the floor and under different mounting conditions.
 
-## Proposed hardware
+## Bill of materials (Fabricate)
 
-| Component | Purpose |
-| --- | --- |
-| **Texas Instruments IWR6843ISK-ODS** | 60 GHz FMCW radar evaluation module for 3D point-cloud and people-tracking experiments |
-| **Raspberry Pi 5 (8 GB)** | Local data acquisition, event logging, radar processing and visualisation |
-| **Official Raspberry Pi 5 power supply** | Reliable power for the processing computer |
-| **Raspberry Pi 5 active cooler** | Thermal management during extended runs |
-| **microSD boot storage** | Operating system and development environment |
-| **Custom 3D-printed housing and adjustable bracket** | Safe, repeatable sensor placement and mounting-angle experiments |
+**[Download the root-level BOM.csv](BOM.csv)** — itemised costs in USD, matching the latest radar-only Fabricate BOM shared for this project. Links point to the manufacturer or Australian retailers.
 
-All parts are **planned**, not represented here as purchased, assembled or tested. Confirm actual radar connection and power requirements for the selected board revision.
+| Part | Qty | Unit cost (USD) | Line total (USD) | Funding | Supplier |
+| --- | ---: | ---: | ---: | --- | --- |
+| [TI IWR6843ISK-ODS radar](https://www.ti.com/tool/IWR6843ISK-ODS) | 1 | $235.55 | $235.55 | Grant | Texas Instruments |
+| [Raspberry Pi 5 Model B 8GB](https://core-electronics.com.au/raspberry-pi-5-model-b-8gb.html) | 1 | $191.25 | $191.25 | Grant | Core Electronics |
+| [Raspberry Pi 5 Active Cooler](https://core-electronics.com.au/raspberry-pi-5-active-cooler.html) | 1 | $6.00 | $6.00 | Grant | Core Electronics |
+| [Official Raspberry Pi 5 27W USB-C power supply](https://core-electronics.com.au/raspberry-pi-5-power-supply-usb-c-pd-27w-white.html) | 1 | $14.20 | $14.20 | Grant | Core Electronics |
+| Shipping, VAT, taxes and contingency | 1 | $22.80 | $22.80 | Grant | Allowance |
+| 3D-printed casings (self-supplied) | 1 | $0.00 | $0.00 | Already owned | Self-supplied |
+| **Total** | | | **$469.80** | | |
+
+**Grant-funded total: US$469.80. Remaining from US$500: US$30.20.**
+
+The 3D-printed mounting assembly and housings are original fabrication deliverables, made using existing resources. These are budgeted/proposed purchases, **not claims of completed fabrication or supplier stock availability**. Boot storage (such as a microSD card) and USB cabling will also be needed and should be added to both the Fabricate submission and `BOM.csv` if they are purchased specifically for this project.
 
 ## Engineering objectives
 
