@@ -20,11 +20,11 @@ The objective is to investigate whether radar point-cloud and tracked-object dat
 | [Raspberry Pi 5 Model B 8GB](https://core-electronics.com.au/raspberry-pi-5-model-b-8gb.html) | 1 | $191.25 | $191.25 | Grant | Core Electronics |
 | [Raspberry Pi 5 Active Cooler](https://core-electronics.com.au/raspberry-pi-5-active-cooler.html) | 1 | $6.00 | $6.00 | Grant | Core Electronics |
 | [Official Raspberry Pi 5 27W USB-C power supply](https://core-electronics.com.au/raspberry-pi-5-power-supply-usb-c-pd-27w-white.html) | 1 | $14.20 | $14.20 | Grant | Core Electronics |
-| Shipping, VAT, taxes and contingency | 1 | $22.80 | $22.80 | Grant | Allowance |
+| Shipping, VAT, taxes and contingency | 1 | $53.00 | $53.00 | Grant | Provisional allowance |
 | 3D-printed casings (self-supplied) | 1 | $0.00 | $0.00 | Already owned | Self-supplied |
-| **Total** | | | **$469.80** | | |
+| **Total** | | | **$500.00** | | |
 
-**Grant-funded total: US$469.80. Remaining from US$500: US$30.20.**
+**Proposed grant-funded total: US$500.00.** The US$53.00 line is a provisional allowance for shipping, taxes and incidental order costs, **not an incurred expense**. Actual charges should be reconciled against receipts and the Fabricate BOM.
 
 The 3D-printed mounting assembly and housings are original fabrication deliverables, made using existing resources. These are budgeted/proposed purchases, **not claims of completed fabrication or supplier stock availability**. Boot storage (such as a microSD card) and USB cabling will also be needed and should be added to both the Fabricate submission and `BOM.csv` if they are purchased specifically for this project.
 
