@@ -1,4 +1,4 @@
-# HearthSense — mmWave Radar Station
+# mmWave Radar Station
 
 **A camera-free experimental human-movement research platform based on 60 GHz millimetre-wave (mmWave) radar.**
 
