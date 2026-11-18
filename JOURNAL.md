@@ -1,4 +1,4 @@
-# Day 1 (11/18/26) - 5 Hours
+# Architected the system - Day 1 (11/18/26) - 5 Hours
 
 Today, I worked on planning the system architecture for a human movement monitoring platform that utilises millimetre-wave (mmWave) radar technology.
 
