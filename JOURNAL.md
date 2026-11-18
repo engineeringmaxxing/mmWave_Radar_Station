@@ -1,5 +1,4 @@
-# Architected the system - Day 1 (11/18/26) - 5 Hours
-
+# November 18th, 2026: Architected the system
 Today, I worked on planning the system architecture for a human movement monitoring platform that utilises millimetre-wave (mmWave) radar technology.
 
 I discerned a problem: cameras are incredibly INVASIVE - especially in aged care settings where people are trying to live peacefully without having video and audio taped. My solution? Researching the logistics of different radar development platforms, evaluating their suitability for tracking human movement, and investigating these fall-like events. No cameras. No wearable devices.
